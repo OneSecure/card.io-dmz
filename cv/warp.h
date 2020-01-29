@@ -12,7 +12,7 @@
 // Returns true if textures are input automatically stretched to fit
 // Useful for determining if points should be normalized or altered 
 // prior to llcv_unwarp.
-DMZ_INTERNAL bool llcv_warp_auto_upsamples();
+DMZ_INTERNAL bool llcv_warp_auto_upsamples(void);
 
 
 // unwarps input image, interpolating image such that src_points map to dst_rect coordinates.

@@ -24,7 +24,7 @@ dmz_point dmz_scale_point(const dmz_point src_p, const dmz_rect src_f, const dmz
 
 dmz_rect dmz_create_rect(float x, float y, float w, float h) {
   dmz_rect r;
-  r.x = x, r.y = y, r.w = w, r.h = h;
+  r.x = x; r.y = y; r.w = w; r.h = h;
   return r;
 }
 

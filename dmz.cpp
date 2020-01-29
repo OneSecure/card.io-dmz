@@ -503,7 +503,7 @@ void dmz_blur_card(IplImage* cardImageRGB, ScannerState* state, int unblurDigits
     for (int i = 0; i < state->mostRecentUsableHSeg.n_offsets && i < blurCount ; i++) {
         int num_x = state->mostRecentUsableHSeg.offsets[i] - 1;
         int num_y = state->mostRecentUsableVSeg.y_offset - 1;
-        int num_w = state->mostRecentUsableHSeg.number_width + 2;
+        int num_w = (int) (state->mostRecentUsableHSeg.number_width + 2);
         int num_h = kNumberHeight + 2;
         if (i < 4) num_h *= 2; // blur smaller four digits below first bucket
         cvSetImageROI(cardImageRGB, cvRect(num_x, num_y, num_w, num_h));
